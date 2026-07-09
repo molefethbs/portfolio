@@ -68,7 +68,7 @@ function Sidebar() {
         {/* Download CV — white default, orange on hover */}
         <a
           href="https://molefethbs.github.io/portfolio/Thabiso-Molefe.pdf"
-          download
+          download="https://molefethbs.github.io/portfolio/Thabiso-Molefe.pdf"
           className="relative overflow-hidden group text-center w-full bg-white text-black font-semibold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95 block uppercase tracking-widest text-sm"
         >
           <span className="relative z-10">Download CV</span>
