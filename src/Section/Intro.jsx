@@ -1,0 +1,93 @@
+import React from "react";
+import Heading from "../Components/Heading";
+import Paragraph from "../Components/Paragraph";
+import { FaCode, FaChartBar  } from "react-icons/fa";
+import { CiLocationArrow1 } from "react-icons/ci";
+
+const Hstyle = "text-white font-bold text-3xl lg:text-5xl";
+
+const Intro = React.forwardRef(function Intro(props, ref) {
+  return (
+    <section
+      ref={ref}
+      data-name="Intro"
+      className="scroll-mt-28 flex flex-col w-full gap-8 md:gap-10 items-center md:items-start pt-16 md:pt-0"
+    >
+      <div>
+        <Heading FWord="SOFTWARE" LWord="DEVELOPER" />
+      </div>
+
+      <div className="md:pr-20 lg:pr-45 text-center md:text-left">
+        <Paragraph para="Passionate about building production-ready software that is scalable, secure, and reliable. Specialize in transforming complex ideas into high-quality systems with clean architecture, efficient performance, and seamless user experiences." />
+      </div>
+
+      {/* Stats */}
+      {/* <div className="flex flex-wrap justify-center md:justify-start w-full gap-8 md:gap-20">
+        {[
+          { count: "3+", label: "YEARS OF EXPERIENCE" },
+          { count: "3+", label: "PROJECTS COMPLETED" },
+          { count: "3+", label: "CLIENTS WORLDWIDE" },
+        ].map((stat, i) => (
+          <div key={i} className="flex flex-col items-center md:items-start group">
+            <h1 className={`${Hstyle} group-hover:text-orange-500 transition-colors duration-300`}>
+              {stat.count}
+            </h1>
+            <div className="max-w-[100px] md:max-w-none">
+              <Paragraph para={stat.label} />
+            </div>
+          </div>
+        ))}
+      </div> */}
+
+      {/* Skill cards */}
+      {/* Stack Cards */}
+      <div className="flex gap-6 flex-col md:flex-row w-full stagger-reveal">
+        {/* Dev card */}
+        <div className="group relative overflow-hidden h-72 w-full md:w-[55%] bg-[#1c1b19]/40 backdrop-blur-xl border border-white/[0.05] rounded-[2rem] p-10 flex flex-col justify-between transition-all duration-500 hover:border-green-400/40 hover:bg-green-400/[0.03] hover:shadow-[0_20px_40px_-15px_rgba(74,222,128,0.15)]">
+          <div className="absolute -right-8 -top-8 w-40 h-40 bg-green-400/10 rounded-full blur-[60px] group-hover:bg-green-400/20 transition-all duration-700 animate-float delay-1000"></div>
+
+          <div className="p-4 bg-green-400/10 rounded-2xl w-fit border border-green-400/20 text-green-500 group-hover:bg-green-400 group-hover:text-black transition-all duration-500">
+            <FaCode size={32} />
+          </div>
+
+          <div className="relative z-10">
+            <h3 className="text-gray-500 text-sm font-semibold tracking-widest uppercase mb-2">Development Stack</h3>
+            <h1 className="text-white font-bold text-2xl leading-tight">
+              Python, C#, React, <br /> JavaScript & JQuery
+            </h1>
+          </div>
+
+          <div className="flex justify-end relative z-10">
+            <button className="h-12 w-12 flex items-center justify-center border border-black/20 bg-white text-green-600 rounded-full hover:bg-green-400 hover:text-white hover:border-green-400 transition-all duration-300 shadow-lg group-hover:scale-110">
+              <CiLocationArrow1 size={24} />
+            </button>
+          </div>
+        </div>
+        
+        {/* Data Analysis card */}
+        <div className="group relative overflow-hidden h-72 w-full md:w-[45%] bg-[#1c1b19]/40 backdrop-blur-xl border border-white/[0.05] rounded-[2rem] p-10 flex flex-col justify-between transition-all duration-500 hover:border-orange-500/40 hover:bg-orange-500/[0.03] hover:shadow-[0_20px_40px_-15px_rgba(249,115,22,0.15)]">
+          <div className="absolute -right-8 -top-8 w-40 h-40 bg-orange-500/10 rounded-full blur-[60px] group-hover:bg-orange-500/20 transition-all duration-700 animate-float"></div>
+
+          <div className="p-4 bg-orange-500/10 rounded-2xl w-fit border border-orange-500/20 text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-500">
+            <FaChartBar  size={32} />
+          </div>
+
+          <div className="relative z-10">
+            <h3 className="text-gray-500 text-sm font-semibold tracking-widest uppercase mb-2">Data Analysis Stack</h3>
+            <h1 className="text-white font-bold text-2xl leading-tight">
+              SQL, Power BI, <br /> Tableau & Excel
+            </h1>
+          </div>
+
+          <div className="flex justify-end relative z-10">
+            <button className="h-12 w-12 flex items-center justify-center border border-white/20 bg-white text-orange-600 rounded-full hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-300 shadow-lg group-hover:scale-110">
+              <CiLocationArrow1 size={24} />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+});
+
+export default Intro;
