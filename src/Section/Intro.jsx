@@ -53,7 +53,7 @@ const Intro = React.forwardRef(function Intro(props, ref) {
           <div className="relative z-10">
             <h3 className="text-gray-500 text-sm font-semibold tracking-widest uppercase mb-2">Development Stack</h3>
             <h1 className="text-white font-bold text-2xl leading-tight">
-              Python, C#, React, <br /> JavaScript & JQuery
+              Python, C#, Java, <br /> JavaScript & React
             </h1>
           </div>
 
